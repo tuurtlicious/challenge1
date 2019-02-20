@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
+
+/** MOBILE VERSION**/
+
+h1 {
+    font-family: Libre Barcode 39 text;
+    text-align: center;
+}
+
+
+.doughnut {
+    grid-area: doughnut;
+}
+
+.column1 {
+    grid-area: column1;
+}
+
+.line1 {
+    grid-area: line1;
+}
+
+.grid-item {
+    display: grid;
+    flex-flow: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas: 
+        "doughnut doughnut"
+        "column1 column1"
+        "line1 line1";
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+body {
+    background-color: black;
+    color: #FFFFFF;
+    font-family: Roboto mono;
+    display: grid;
+    grid-template-columns: 100%
+}
+
+p {
+    font-size: 16px;
+
+}
+
+/** LAPTOP VERSION**/
+@media only screen and (min-width: 699px){
+    body {
+        background-color: black;
+        color: #FFFFFF;
+        font-family: Roboto mono;
+        display: grid;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "doughnut doughnut column1 column1"
+            ". line1 line1 . ";
+        grid-gap: 20px;
+        padding: 10px;
+    }
+}
+
+/** DESKTOP VERSION **/
+@media only screen and (min-width: 1366px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "doughnut doughnut column1 column1"
+            "line1 line1 line1 line1";
+        grid-gap: 20px;
+        padding: 10px;
+    }
+}
